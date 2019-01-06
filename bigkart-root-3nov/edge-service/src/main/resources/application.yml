@@ -1,0 +1,15 @@
+spring:
+    application:
+      name: edge-service
+server:
+  port: 8000
+  
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/edureka
+
+#zuul:
+ # routes:
+  # path: /order/**
+   #serviceId: order-service

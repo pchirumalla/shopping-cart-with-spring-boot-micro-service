@@ -1,0 +1,17 @@
+server:
+   port: 8083
+spring:
+  application:
+    name: recommendation-service
+#  data:
+#   elasticsearch:
+#     cluster-nodes: localhost:9300
+  
+ 
+ 
+      
+      
+        
+
+
+

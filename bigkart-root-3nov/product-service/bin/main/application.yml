@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url:  "jdbc:h2:mem:test;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS mssupply"
+    usernme: "sa"
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: create-drop
+        show-sql: true
+server:
+  port: 8081
+ 
+      
+      
+        
+
+
+

@@ -1,0 +1,2 @@
+rootProject.name = 'bigkart-root-3nov'
+include('product-service','discovery-service','order-service','edge-service','order-service-tdd', 'recommendation-service')
