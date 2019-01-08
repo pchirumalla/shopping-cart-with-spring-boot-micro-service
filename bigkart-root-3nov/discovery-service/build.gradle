@@ -9,7 +9,9 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
-
+bootJar {
+    mainClassName = 'com.edureka.ms.training.discoveryservice.DiscoveryServiceApplication'
+}
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
