@@ -9,6 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
+@Getter
 @Document
 public class ProductRequest {
     Integer id;

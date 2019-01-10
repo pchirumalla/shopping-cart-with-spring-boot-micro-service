@@ -1,2 +1,16 @@
 rootProject.name = 'bigkart-root-3nov'
-include('product-service','discovery-service','order-service','edge-service','order-service-tdd', 'recommendation-service')
+//include('product-service','discovery-service','order-service','edge-service','order-service-tdd', 'recommendation-service')
+
+// set up a couple file filters to find the dirs we consider subprojects
+FileFilter projectFilter = { File pathname ->
+    FileFilter gradleProjectFilter = { File file -> file.name == 'build.gradle' }
+    // add this folder if is a directory and that directory contains a build.gradle file
+    // here note `File#listFiles` is true if it's `size() > 0` due to
+    // groovy's concept of truth (details: http://groovy-lang.org/semantics.html#Groovy-Truth)
+    return pathname.isDirectory() && pathname.listFiles(gradleProjectFilter)
+}
+
+settingsDir.listFiles(projectFilter).each { dir ->
+    include ":$dir.name"
+    project(":$dir.name").projectDir = dir
+}

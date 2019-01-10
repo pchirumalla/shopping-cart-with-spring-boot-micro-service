@@ -9,9 +9,9 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
-bootJar {
-    mainClassName = 'com.edureka.ms.training.discoveryservice.DiscoveryServiceApplication'
-}
+//bootJar {
+ //   mainClassName = 'com.edureka.ms.training.discoveryservice.DiscoveryServiceApplication'
+//}
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -28,7 +28,8 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
-    compile('de.dentrassi.elasticsearch:log4j2-mock:0.0.2-SNAPSHOT')
+   // compile('de.dentrassi.elasticsearch:log4j2-mock:0.0.2-SNAPSHOT')
+    compile('de.dentrassi.elasticsearch:log4j2-mock:0.0.1')
     compile('org.apache.logging.log4j:log4j-api:2.7')
     testCompile('org.springframework.boot:spring-boot-starter-test')
    	compile('org.springframework.cloud:spring-cloud-stream')
