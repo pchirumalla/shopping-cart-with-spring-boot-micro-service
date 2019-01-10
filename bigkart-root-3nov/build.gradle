@@ -24,18 +24,18 @@ subprojects{
         runtime('org.springframework.boot:spring-boot-devtools')
         compileOnly('org.projectlombok:lombok')
         testCompile('org.springframework.boot:spring-boot-starter-test')
-        
-        
+        compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+        compile project(":discovery-service")
   
     }
     ext {
         springCloudVersion = 'Finchley.SR1'
     }
 
-    dependencies {
+   /* dependencies {
         compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
         testCompile('org.springframework.boot:spring-boot-starter-test')
-    }
+    } */
  
     dependencyManagement {
         imports {
