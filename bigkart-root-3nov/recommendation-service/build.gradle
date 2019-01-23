@@ -9,10 +9,10 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
-//bootJar {
- //   mainClassName = 'com.edureka.ms.training.discoveryservice.DiscoveryServiceApplication'
-//}
-apply plugin: 'java'
+application{
+	mainClassName = "com.edureka.ms.training.recommendationservice.RecommendationServiceApplication"
+}
+//apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
