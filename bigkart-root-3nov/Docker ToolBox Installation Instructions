@@ -1,0 +1,11 @@
+https://docs.docker.com/toolbox/toolbox_install_windows/
+
+C:\Users\padmavathi\git\shopping-cart-with-spring-boot-micro-service\bigkart-root-3nov
+
+cd /c/Users/padmavathi/git/shopping-cart-with-spring-boot-micro-service/bigkart-root-3nov/discovery-service 
+
+docker build --file=Dockerfile \ 
+--tag=discovery-service:latest --rm=true .
+
+kubectl run discovery-service --image=discovery-service:latest \
+  --port=8080 --image-pull-policy Never
